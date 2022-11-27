@@ -27,6 +27,7 @@
 # 설치방법 1 - 로컬 설치 (윈도우 10 기준)
 먼저 XAMPP 가 설치 되어 있어야 합니다. 없으시면 아래 링크에서 다운받아 주세요.<br>
 https://www.apachefriends.org/download.html
+<br>
 ![-1](https://user-images.githubusercontent.com/71935033/193309305-1dfd0e73-09ce-4fc4-8b91-cd843546acf5.JPG)
 
 그리고 위로가셔서 파일 다운받으시고 C:\xampp\htdocs 폴더에 압축을 풀어주세요.<br>
