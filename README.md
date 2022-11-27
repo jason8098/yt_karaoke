@@ -25,15 +25,15 @@
 
 
 # 설치방법 1 - 로컬 설치 (윈도우 10 기준)
-먼저 XAMPP 가 설치 되어 있어야 합니다. 없으시면 아래 링크에서 다운받아 주세요.
+먼저 XAMPP 가 설치 되어 있어야 합니다. 없으시면 아래 링크에서 다운받아 주세요.<br>
 https://www.apachefriends.org/download.html
 ![-1](https://user-images.githubusercontent.com/71935033/193309305-1dfd0e73-09ce-4fc4-8b91-cd843546acf5.JPG)
 
-그리고 위로가셔서 파일 다운받으시고 C:\xampp\htdocs 폴더에 압축을 풀어주세요.
+그리고 위로가셔서 파일 다운받으시고 C:\xampp\htdocs 폴더에 압축을 풀어주세요.<br>
 ![image](https://user-images.githubusercontent.com/71935033/204156527-e0014a63-a4fc-42ee-91ab-1e5044606ef0.png)
 그 후 Xampp Control Panel 을 실행 후 Apache 랑 Mysql 을 (start)켜줍니다.<br>
 
-Mysql 의 admin 버튼을 눌러 phpmyadmin 에 접속후 nrb 라는 이름의 데이터베이스를 만들고, 파일에 포합된 nrb.sql 파일을 가져오기 하시면 됩니다.
+Mysql 의 admin 버튼을 눌러 phpmyadmin 에 접속후 nrb 라는 이름의 데이터베이스를 만들고, 파일에 포합된 nrb.sql 파일을 가져오기 하시면 됩니다.<br>
 ![0](https://user-images.githubusercontent.com/71935033/193286948-22fe9f20-aeff-4839-8ede-7cf948325611.JPG)
 ![1](https://user-images.githubusercontent.com/71935033/193286959-f09fe17a-d163-4622-b92b-29ce75bfcba2.JPG)
 ![2](https://user-images.githubusercontent.com/71935033/193286974-52f460c1-fb7f-4a9a-976a-e18e5b9e1366.JPG)
