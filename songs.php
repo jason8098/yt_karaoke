@@ -19,5 +19,5 @@ function get_content($name,$str){
     }
   }
 }
-get_content($n,$s)
+get_content($n,$s);
 ?>
