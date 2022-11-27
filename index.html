@@ -1,0 +1,186 @@
+<html>
+    <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="style.css">
+        <script>
+          var whichOne=0;
+        </script>
+    </head>
+    <body>
+      <video autoplay muted loop id="myVideo">
+        <source src="intro.mp4" type="video/mp4">
+        브라우저가 HTML5 비디오를 지원하지 않습니다.
+      </video>
+      <div class="overlay"></div>
+      <div class="content">
+        <h1>☆ 노래방 v1.5 ☆</h1>
+        <h2 id="cst" onclick="csToggle()" style="margin-top:-2%">현재곡 / 예약곡 : 접기▲</h2>
+        <h3 id="message" style="color:rgb(255, 17, 0); margin-top:-2%"></h3>
+        <table class="center" id="ss">
+        <script>
+          var ss=document.getElementById('ss');
+          var msg=document.getElementById('message');
+          var cst=document.getElementById('cst');
+          var tgc=0;
+          var ten=1;
+          var cstInterval = setInterval(updateCst, 1000);
+
+          function csToggle(){
+            tgc=tgc+1;
+            console.log(tgc);
+            if(tgc==0){
+              if(ss.rows.length != 1){
+                ss.style.display="";
+                cstInterval = setInterval(updateCst, 1000);
+              }
+              cst.innerHTML="현재곡 / 예약곡 : 접기▲";
+              ten=0;
+            }else if(tgc==1){
+              clearInterval(cstInterval);
+              ss.style.display="none";
+              cst.innerHTML="현재곡 / 예약곡 : 펼치기▼";
+              tgc=-1;
+              ten=1;
+            }
+          }
+          // 유튜브 api 키를 아래 따움표 사이에 써주시면 됩니다.
+          apiKey="";
+          
+        function updateCst(){
+          var xmlHttp = new XMLHttpRequest();
+          xmlHttp.open( "GET", "songs.php?name=title&str=1", false ); // false for synchronous request
+          xmlHttp.send( null );
+          ss.innerHTML="<th>#</th><th>곡제목</th><th style='text-align:center;'>동작</th>"+xmlHttp.responseText;
+          if(ss.rows.length == 1){
+            msg.style.display="block";
+            ss.style.display="none";
+            msg.innerHTML="현제 예약된 곡이 없습니다.";
+          }else{
+            msg.innerHTML="";
+            ss.style.display="block";
+            msg.style.display="none";
+          }
+        }
+        if(ten==1){
+          updateCst();
+        }
+        
+        </script>
+
+        </table>
+        <br>
+            
+            <div class="searchBar">
+              <input id="query" type="textbox" placeholder="곡 제목을 입력하세요." required>
+              <button class="btn1" onclick="search()">검색</button>
+              <button class="btn2" onclick="reserve()">예약</button>
+            </div>
+            
+            <p>곡을 선택 후 '예약' 을 눌러주세요.</p>
+        <div class="tbl">
+          <table style="display:none;" class="center" id="songlist">
+            <tr>
+              <th>#</th>
+              <th>곡제목</th>
+            </tr>
+          </table>
+          <p style="font-size: smaller;">© 2022 KIM - All Rights Reserved.</p>
+        </div>
+        
+        <script>
+            var vid;
+            var wo="";
+            var wt="";
+            function whichOne(id,tt){
+              wo=id;
+              wt=tt;
+            }
+            function reserve(){
+              if(wo==""){
+                alert("곡을 선택해 주세요.")
+              }else{
+                if(confirm("정말 "+wt+"을(를) 예약 하시겠습니까?")==true){
+                  $(function() {
+                    $.ajax({
+                        url: 'manage.php',
+                        type: 'POST',
+                        data: {
+                            action: 'add',
+                            title: wt,
+                            vid: wo
+                        },
+                        success: function(msg) {
+                          wo="";
+                          wt="";
+                        },
+                        error: function(XMLHttpRequest, textStatus, errorThrown) { 
+                        alert("Status: " + textStatus); alert("Error: " + errorThrown); 
+                    }                    
+                    });
+                });
+                }
+              }
+              
+            }
+
+            function cancle(no){
+              if(confirm("정말 취소 하시겠습니까?")==true){
+                  $(function() {
+                    $.ajax({
+                        url: 'manage.php',
+                        type: 'POST',
+                        data: {
+                            action: 'cancle',
+                            no:no
+                        },
+                        success: function(msg) {
+                        },
+                        error: function(XMLHttpRequest, textStatus, errorThrown) { 
+                        alert("Status: " + textStatus); alert("Error: " + errorThrown); 
+                    }                    
+                    });
+                });
+                }
+            }
+
+            function search(){
+                var query=document.getElementById('query').value;
+                var songlist=document.getElementById('songlist');
+                
+                songlist.innerHTML="<tr><th>#</th><th>곡제목</th></tr>";
+                var vid;
+                var title;
+                if(query!=""){
+                  songlist.style.display="";
+                    $.getJSON('https://www.googleapis.com/youtube/v3/search?key='+apiKey+'&channelId=UCZUhx8ClCv6paFW7qi3qljg&part=snippet,id&maxResults=10&q='+query, function(data) {
+                        vid=data;
+                        var ii;
+                        console.log(data);
+                        for(var i=0; i<10; i++){
+                            console.log(data.items[i].id.videoId);
+                            console.log(data.items[i].snippet.title);
+                            vid=data.items[i].id.videoId;
+                            title=data.items[i].snippet.title;
+                            var ls = document.createElement('tr');
+                            ii=i+1;
+                            title=title.replace('/ TJ Karaoke','').replace('/ TJ노래방','').replace('TJ노래방 / ','').replace('[TJ노래방]','').replace('( - )','').replace('(Karaoke/lyrics/roman','');
+                            ls.innerHTML="<td style='text-align:center'>"+ii+"</td>"+"<td class='ttl' onclick='whichOne("+'"'+vid+'"'+','+'"'+title.replace(' ','').replace(' ','')+'"'+")'>"+title+"</td>";
+                            songlist.appendChild(ls);
+                        }
+                    });
+                }else{
+                  alert("검색어를 입력해 주세요!");
+                }
+            }
+            
+            function resizeIframe(obj) {
+              obj.style.height = obj.contentWindow.document.documentElement.scrollHeight + 'px';
+            }
+            
+        </script>
+      </div>
+      
+    </body>
+</html>
