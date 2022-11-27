@@ -3,7 +3,18 @@
 유튜브 API, PHP 와 MYSQL 데이터베이스를 이용해서 간단한 노래방 시스템을 만들어 봤습니다.<br>
 핸드폰으로 리모컨 역할(검색, 예약, 취소)을 하며, 곡 검색을 하면 유튜브 API 를 이용해 태진 노래방 채널에서 검색목록울 가져옵니다.<br>
 예약을 하면 곡 제목과 영상 ID 가 DB 에 등록됩니다.<br>
-player.php 에서 영상이 재생되며, DB 목록을 상시로 업데이트 해주어 현제곡 / 예약곡 등 정보를 보여줍니다.<br>
+컴퓨터의 player.php 에서 영상이 재생되며, DB 목록을 상시로 업데이트 해주어 현제곡 / 예약곡 등 정보를 보여줍니다.<br>
+
+# 스크린샷 / 사진
+![image](https://user-images.githubusercontent.com/71935033/204155916-f5f10927-1725-4a30-8a2b-da2aa0919541.png)
+![image](https://user-images.githubusercontent.com/71935033/204155927-01495356-3898-456f-a107-d3bfe6037565.png)
+![image](https://user-images.githubusercontent.com/71935033/204155953-c0c45baf-2480-438c-a00e-058acf769a9a.png)
+![WhatsApp Image 2022-11-28 at 1 06 35 AM](https://user-images.githubusercontent.com/71935033/204156017-c1738b29-dea6-4014-9710-bdc8fde6c320.jpeg)
+![WhatsApp Image 2022-11-28 at 1 06 35 AM (1)](https://user-images.githubusercontent.com/71935033/204156019-52a8604d-e6b5-48fd-867a-f9baf69b05aa.jpeg)
+![WhatsApp Image 2022-11-28 at 1 06 35 AM (2)](https://user-images.githubusercontent.com/71935033/204156021-5ecab198-90b2-4bbf-b4fd-09376d52e0b5.jpeg)
+![WhatsApp Image 2022-11-28 at 1 06 35 AM (3)](https://user-images.githubusercontent.com/71935033/204156023-5af723de-1983-48b4-affa-2d9d2802b83f.jpeg)
+![WhatsApp Image 2022-11-28 at 1 08 21 AM](https://user-images.githubusercontent.com/71935033/204156024-d53dce6f-5a4c-4c8a-8e29-179017469023.jpeg)
+
 
 # 설치방법 1 - 로컬 설치 (윈도우 10 기준)
 먼저 XAMPP 가 설치 되어 있어야 합니다. 없으시면 아래 링크에서 다운받아 주세요.
