@@ -20,13 +20,15 @@
 ![WhatsApp Image 2022-11-28 at 1 06 35 AM (3)](https://user-images.githubusercontent.com/71935033/204156023-5af723de-1983-48b4-affa-2d9d2802b83f.jpeg)
 
 # 실제 적용된 모습
+아 참고로 저 셋업 구성은 <br>
+마이크 -> 오디오 인터페이스 -> DAW(ex: cakewalk) -> 라이브 이펙트(ex: 에코, 리버브, EQ 등등) -> 오인페 출력 -> 스피커<br>
+입니다.<br>
+근데 이게 꽤 복잡합니다 ㅋㅋ <br>
+복잡한거 싫어하시면 걍 에코되는 앰프+스피커 쓰시거나 블루투스 마이크를 연결해도 좋습니다.<br>
 ![WhatsApp Image 2022-11-28 at 1 12 34 AM](https://user-images.githubusercontent.com/71935033/204156222-2baced4a-37a5-4dfe-854c-5af6f6dbf81b.jpeg)
 ![WhatsApp Image 2022-11-28 at 1 14 07 AM](https://user-images.githubusercontent.com/71935033/204156232-81672eef-947c-4458-bd4e-1eb70cb58dca.jpeg)
 <br>
-아 참고로 저 셋업 구성은 <br>
-마이크 -> 오디오 인터페이스 -> DAW(ex: cakaewalk) -> 라이브 이펙트(ex: 에코, 리버브, EQ 등등) -> 오인페 출력 -> 스피커<br>
-입니다.<br>
-근데 이게 꽤 복잡해서 오디오 관련 부분은 여기서 다루지 않겠습니다. <br>
+
 
 # 설치방법 1 - 로컬 설치 (윈도우 10 기준)
 먼저 XAMPP 가 설치 되어 있어야 합니다. 없으시면 아래 링크에서 다운받아 주세요.<br>
