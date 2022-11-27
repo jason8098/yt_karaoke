@@ -6,17 +6,22 @@
 컴퓨터의 player.php 에서 영상이 재생되며, DB 목록을 상시로 업데이트 해주어 현제곡 / 예약곡 등 정보를 보여줍니다.<br>
 
 # 스크린샷 / 사진
+
+## PC 화면
 ![image](https://user-images.githubusercontent.com/71935033/204155916-f5f10927-1725-4a30-8a2b-da2aa0919541.png)
 ![image](https://user-images.githubusercontent.com/71935033/204155927-01495356-3898-456f-a107-d3bfe6037565.png)
 ![image](https://user-images.githubusercontent.com/71935033/204156096-b798b006-2009-4e09-9547-8858c55d60f4.png)
 
-
+## 모바일 화면
 ![WhatsApp Image 2022-11-28 at 1 06 35 AM](https://user-images.githubusercontent.com/71935033/204156017-c1738b29-dea6-4014-9710-bdc8fde6c320.jpeg)
 ![WhatsApp Image 2022-11-28 at 1 06 35 AM (1)](https://user-images.githubusercontent.com/71935033/204156019-52a8604d-e6b5-48fd-867a-f9baf69b05aa.jpeg)
 ![WhatsApp Image 2022-11-28 at 1 08 21 AM](https://user-images.githubusercontent.com/71935033/204156024-d53dce6f-5a4c-4c8a-8e29-179017469023.jpeg)
 ![WhatsApp Image 2022-11-28 at 1 06 35 AM (2)](https://user-images.githubusercontent.com/71935033/204156021-5ecab198-90b2-4bbf-b4fd-09376d52e0b5.jpeg)
 ![WhatsApp Image 2022-11-28 at 1 06 35 AM (3)](https://user-images.githubusercontent.com/71935033/204156023-5af723de-1983-48b4-affa-2d9d2802b83f.jpeg)
 
+# 실제 적용된 모습
+![WhatsApp Image 2022-11-28 at 1 12 34 AM](https://user-images.githubusercontent.com/71935033/204156222-2baced4a-37a5-4dfe-854c-5af6f6dbf81b.jpeg)
+![WhatsApp Image 2022-11-28 at 1 14 07 AM](https://user-images.githubusercontent.com/71935033/204156232-81672eef-947c-4458-bd4e-1eb70cb58dca.jpeg)
 
 
 # 설치방법 1 - 로컬 설치 (윈도우 10 기준)
