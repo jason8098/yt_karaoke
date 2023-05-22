@@ -117,7 +117,7 @@ XAMPP의 경우, 그 컴퓨터 에서 파이어폭스 브라우저에 http://loc
 1. 크롬은 자동재생이 안되기 떄문에 파이어폭스를 권장 드립니다.
 2. 작동이 안되면 console.google.com 에서 프로젝트에 유튜브 API 가 활설화 되어 있는지, 또는 API 키가 정확한 지 확인 해보시길 바랍니다.
 
-# 4. 기타 라이센스들
+# 기타 라이센스들
 ## 1. 네이버 나눔고딕 폰트
 Copyright (c) 2010, NAVER Corporation (https://www.navercorp.com/) with Reserved Font Name Nanum, Naver Nanum, NanumGothic, Naver NanumGothic, NanumMyeongjo, Naver NanumMyeongjo, NanumBrush, Naver NanumBrush, NanumPen, Naver NanumPen, Naver NanumGothicEco, NanumGothicEco, Naver NanumMyeongjoEco, NanumMyeongjoEco, Naver NanumGothicLight, NanumGothicLight, NanumBarunGothic, Naver NanumBarunGothic, NanumSquareRound, NanumBarunPen, MaruBuri, NanumSquareNeo
 
