@@ -132,7 +132,7 @@ Version 1.1 - 26 February 2007
 ## 2. 오픈소스 라이선스
 MIT License
 
-Copyright (c) 2023 
+Copyright (c) 2023 jason8098
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
